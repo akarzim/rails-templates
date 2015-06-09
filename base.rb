@@ -41,6 +41,7 @@ CODE
 after_bundle do
   log 'initialized', 'application structure'
 
+  apply '_environment.rb'
   apply '_template-engine.rb'
   apply '_locale.rb'
   apply '_assets.rb'

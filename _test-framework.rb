@@ -1,4 +1,4 @@
-if yes? 'Initialize with Rspec support?'
+if yes? 'Initialize with Rspec support? [yN] '
   gem_group :development, :test do
    gem 'rspec-rails'
   end

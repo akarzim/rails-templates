@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title <%= app_name.humanize.titleize %>
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  body
+    .wrapper-for-content-outside-of-footer
+      = render 'layouts/header'
+      = flash_message
+      = yield
+    = render 'layouts/footer'

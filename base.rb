@@ -32,6 +32,7 @@ after_bundle do
   apply '_environment.rb'
   apply '_template-engine.rb'
   apply '_test-framework.rb'
-  apply '_locale.rb'
   apply '_assets.rb'
+  apply '_layout.rb'
+  apply '_locale.rb'
 end

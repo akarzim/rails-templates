@@ -2,6 +2,10 @@ locales = (ENV['LOCALES'] || ask('Which locales do you want to use (separate wit
 locales = [locales].flatten(1).compact
 
 locales.each do |locale|
+  append_to_file 'app/views/layouts/_header.slim', <<-CODE
+      = link_to('#{locale.upcase}', params.merge(locale: :#{locale.downcase}), class: 'locale')
+  CODE
+
   locale += '.yml' unless locale =~ /\.(yml|rb)$/
   get "https://github.com/svenfuchs/rails-i18n/raw/master/rails/locale/#{locale}", "config/locales/#{locale}"
 end

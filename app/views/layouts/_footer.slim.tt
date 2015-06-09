@@ -1,0 +1,5 @@
+footer role="contentinfo"
+  .footer-logo
+    = fa_icon 'circle-o-notch'
+
+  p by François Vantomme

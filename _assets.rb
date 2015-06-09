@@ -38,13 +38,13 @@ end
 
 
 if bourbon
-  copy_file 'assets/stylesheets/_fonts.scss', 'app/assets/stylesheets/_fonts.scss'
-  copy_file 'assets/stylesheets/_variables.scss', 'app/assets/stylesheets/_variables.scss'
-  copy_file 'assets/stylesheets/_typography.scss', 'app/assets/stylesheets/_typography.scss'
-  copy_file 'assets/stylesheets/_forms.scss', 'app/assets/stylesheets/_forms.scss'
-  copy_file 'assets/stylesheets/_header.scss', 'app/assets/stylesheets/_header.scss'
-  copy_file 'assets/stylesheets/_footer.scss', 'app/assets/stylesheets/_footer.scss'
-  copy_file 'assets/stylesheets/_flashes.scss', 'app/assets/stylesheets/_flashes.scss'
+  copy_file 'app/assets/stylesheets/_fonts.scss'
+  copy_file 'app/assets/stylesheets/_variables.scss'
+  copy_file 'app/assets/stylesheets/_typography.scss'
+  copy_file 'app/assets/stylesheets/_forms.scss'
+  copy_file 'app/assets/stylesheets/_header.scss'
+  copy_file 'app/assets/stylesheets/_footer.scss'
+  copy_file 'app/assets/stylesheets/_flashes.scss'
 
   inside 'app/assets/stylesheets/' do
     append_to_file 'application.scss', <<-CODE

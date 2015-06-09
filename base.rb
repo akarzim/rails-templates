@@ -43,4 +43,5 @@ after_bundle do
 
   apply '_template-engine.rb'
   apply '_locale.rb'
+  apply '_assets.rb'
 end

@@ -35,4 +35,6 @@ CODE
 
 after_bundle do
   log 'initialized', 'application structure'
+
+  apply '_locale.rb'
 end

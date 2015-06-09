@@ -6,6 +6,11 @@ git :init
 run 'git flow init' if yes? 'Initialize with Git Flow support?'
 git add: '.', commit: '-m "initial commit"'
 
+environment <<-CODE
+config.generators do |g|
+    end
+CODE
+
 file '.gitignore', <<-CODE
 # Ignore bundler config.
 /.bundle
@@ -36,5 +41,6 @@ CODE
 after_bundle do
   log 'initialized', 'application structure'
 
+  apply '_template-engine.rb'
   apply '_locale.rb'
 end

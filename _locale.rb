@@ -1,4 +1,4 @@
-locales = (ENV['LOCALES'] || ask('Which locales do you want to use (separate with commas if more)?')).split(/[,\s]+/)
+locales = (ENV['LOCALES'] || ask('Which locales do you want to use (separate with commas if more)? [en]')).split(/[,\s]+/)
 locales = [locales].flatten(1).compact
 
 locales.each do |locale|

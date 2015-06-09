@@ -6,7 +6,7 @@ end
 environment "config.assets.enabled = true"
 environment "config.assets.paths << Rails.root.join('/app/assets/fonts')"
 
-bourbon = yes? 'Initialize with Bourbon CSS framework? [yN] '
+bourbon = yes? 'Initialize with Bourbon CSS framework? [yN]'
 
 if bourbon
   gem 'bourbon'
@@ -24,7 +24,7 @@ if bourbon
   end
 end
 
-font_awesome = yes? 'Initialize with FontAwesome support? [yN] '
+font_awesome = yes? 'Initialize with FontAwesome support? [yN]'
 
 if font_awesome
   gem 'font-awesome-rails'

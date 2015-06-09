@@ -3,7 +3,7 @@ def source_paths
 end
 
 git :init
-run 'git flow init' if yes? 'Initialize with Git Flow support? [yN] '
+run 'git flow init' if yes? 'Initialize with Git Flow support? [yN]'
 git add: '.', commit: '-m "initial commit"'
 
 environment <<-CODE

@@ -11,28 +11,16 @@ config.generators do |g|
     end
 CODE
 
-file '.gitignore', <<-CODE
-# Ignore bundler config.
-/.bundle
-
-# Ignore all logfiles and tempfiles.
-/log/*
-!/log/.keep
+append_to_file '.gitignore', <<-CODE
 /.sass-cache
-/tmp
 *.*~
 *.bak
 .*.log
 .DS_Store
 
-# Ignore the default SQLite database.
+# Ignore the default database
 /db/*.db
-/db/*.sqlite3
-/db/*.sqlite3-journal
 /db/schema.rb
-
-# Ignore application configuration
-/config/application.yml
 
 # Ignore Gemfile.lock
 Gemfile.lock

@@ -1,0 +1,15 @@
+# Ignore bundler config.
+/.bundle
+
+# Ignore all logfiles and tempfiles.
+/log/*
+!/log/.keep
+/tmp
+/.sass-cache
+*.*~
+*.bak
+.*.log
+.DS_Store
+
+# Ignore Gemfile.lock
+Gemfile.lock

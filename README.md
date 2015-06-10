@@ -23,6 +23,22 @@ Your new Rails app can be configured to use the Git-Flow branching model based o
 ##### Installation
 Please visit the official wiki page to proceed to [Installation](https://github.com/nvie/gitflow/wiki/Installation).
 
+## Usage
+Just clone this repository and apply the template named `base.rb` :
+
+```shell
+$ git clone git@github.com:akarzim/rails-templates.git
+$ rails new -m rails-templates/base.rb <my-project>
+```
+Then launch your rails server as usual :
+
+```
+$ cd <my-project>
+$ rails server
+```
+
+And look at the result by browsing to [http://localhost:3000](http://localhost:3000)
+
 ## Templates
 
 The main template is named `base.rb` and applies sub-templates in this order :

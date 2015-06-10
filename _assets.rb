@@ -11,7 +11,6 @@ bourbon = yes? 'Initialize with Bourbon CSS framework? [yN]'
 if bourbon
   gem 'bourbon'
   gem 'neat'
-  gem 'refills'
 
   run 'bundle update sass'
 

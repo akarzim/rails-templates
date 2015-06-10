@@ -1,5 +1,7 @@
 locales = (ENV['LOCALES'] || ask('Which locales do you want to use (separate with commas if more)? [en]')).split(/[,\s]+/)
-locales = [locales].flatten(1).compact
+locales = [locales].flatten(1).compact.map do |locale|
+  locale.gsub(/\.yml$/, '')
+end
 
 insert_into_file 'config/routes.rb', after: "Rails.application.routes.draw do\n" do
   <<-CODE
@@ -13,8 +15,8 @@ locales.each do |locale|
       = link_to('#{locale.upcase}', params.merge(locale: :#{locale.downcase}), class: 'locale')
   CODE
 
-  locale += '.yml' unless locale =~ /\.(yml|rb)$/
-  get "https://github.com/svenfuchs/rails-i18n/raw/master/rails/locale/#{locale}", "config/locales/#{locale}"
+  git rm: "config/locales/#{locale}.yml" if locale == 'en'
+  get "https://github.com/svenfuchs/rails-i18n/raw/master/rails/locale/#{locale}.yml", "config/locales/#{locale}.yml"
 end
 
 default_locale = locales.first

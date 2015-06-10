@@ -31,7 +31,7 @@ if font_awesome
 
   inside 'app/assets/stylesheets/' do
     append_to_file 'application.scss', <<-CODE
-    @import "fontawesome";
+    @import "font-awesome";
     CODE
   end
 end

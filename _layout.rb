@@ -1,3 +1,5 @@
+require 'git'
+
 insert_into_file 'app/helpers/application_helper.rb', after: "module ApplicationHelper\n" do
   <<-CODE
   def flash_message

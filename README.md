@@ -33,6 +33,7 @@ The main template is named `base.rb` and applies sub-templates in this order :
 4. assets
 5. layout
 6. locale
+7. dry
 
 ### Base
 Your new Rails app will be versioned with Git and each one of the following sub-template will perform a separate commit. Optionally, you can opt in to use the Git Flow branching model.
@@ -58,6 +59,9 @@ A minimal `applicaiton.slim` layout using `_header.slim` and `_footer.slim` part
 
 ### Locale (optional)
 You'll be asked for which locales you want to install and configure. The available choices are listed in the [Rails i18n](https://github.com/svenfuchs/rails-i18n#available-locales) `README.md` file. These locales will be downloaded from this repo and automatically available in your project and added to the `_header.slim` partial layout's locale switches.
+
+### DRY
+We also add a set of [Rails Responders](https://github.com/plataformatec/responders) to dry up our application.
 
 ## Troubleshooting
 ### Rspec:install never end

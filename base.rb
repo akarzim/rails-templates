@@ -36,4 +36,5 @@ after_bundle do
   apply '_assets.rb'
   apply '_layout.rb'
   apply '_locale.rb'
+  apply '_dry.rb'
 end

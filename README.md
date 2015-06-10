@@ -34,6 +34,7 @@ The main template is named `base.rb` and applies sub-templates in this order :
 5. layout
 6. locale
 7. dry
+8. root
 
 ### Base
 Your new Rails app will be versioned with Git and each one of the following sub-template will perform a separate commit. Optionally, you can opt in to use the Git Flow branching model.
@@ -62,6 +63,9 @@ You'll be asked for which locales you want to install and configure. The availab
 
 ### DRY
 We also add a set of [Rails Responders](https://github.com/plataformatec/responders) to dry up our application.
+
+### Root
+Finally, we create and configure a `welcome#home` root action. You can choose another name for this action during the install process.
 
 ## Troubleshooting
 ### Rspec:install never end

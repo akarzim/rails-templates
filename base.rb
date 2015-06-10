@@ -37,4 +37,5 @@ after_bundle do
   apply '_layout.rb'
   apply '_locale.rb'
   apply '_dry.rb'
+  apply '_root.rb'
 end

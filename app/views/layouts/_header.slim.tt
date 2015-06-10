@@ -1,0 +1,7 @@
+header.navigation role="banner"
+  .navigation-wrapper
+    = link_to(locale_root_path, class: 'logo') do
+      h1= fa_icon 'circle-o-notch', text: '<%= app_name.humanize.titleize %>'
+
+    .navigation-tools
+      = link_to('EN', params.merge(locale: :en), class: 'locale')

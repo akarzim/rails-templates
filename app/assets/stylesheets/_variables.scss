@@ -1,0 +1,17 @@
+$medium-screen: em(640) !default;
+$large-screen: em(860) !default;
+
+$sans-serif: 'Questrial', sans-serif;
+$serif: 'Sanchez', serif;
+
+$dark-gray: #333 !default;
+$medium-gray: #999 !default;
+$light-gray: #DDD !default;
+$action-color: #EE7F02 !default;
+
+$base-border-color: gainsboro !default;
+$base-border-radius: 3px !default;
+$base-font-color: $dark-gray !default;
+$base-line-height: 1.5em !default;
+$base-link-color: $action-color !default;
+$base-spacing: 1.5em !default;

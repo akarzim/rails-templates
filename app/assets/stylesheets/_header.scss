@@ -1,0 +1,72 @@
+header.navigation {
+  $horizontal-bar-mode: $large-screen;
+  $navigation-padding: 1em;
+  $navigation-background: $dark-gray;
+  $navigation-color: #EE7F02;
+  $navigation-color-hover: #F3A652;
+  $navigation-height: 60px;
+
+  background-color: $navigation-background;
+  border-bottom: 1px solid darken($navigation-background, 10);
+  min-height: $navigation-height;
+  width: 100%;
+  z-index: 999;
+
+  .navigation-wrapper {
+    @include clearfix;
+    @include outer-container;
+    position: relative;
+    z-index: 9999;
+  }
+
+  .logo {
+    float: left;
+    max-height: $navigation-height;
+    padding-left: $navigation-padding;
+    padding-right: 2em;
+
+    h1 {
+      color: $navigation-color;
+      display: inline-block;
+      font-size: 2em;
+      line-height: $navigation-height;
+      margin: 0;
+      padding: 0;
+      vertical-align: top;
+
+      &:hover {
+        color: $navigation-color-hover;
+      }
+    }
+  }
+
+  // Elements on the far right
+  .navigation-tools {
+    background: #505050;
+    clear: both;
+    display: block;
+    height: $navigation-height;
+    padding-left: $navigation-padding / 2;
+    padding-right: $navigation-padding;
+
+    @include media($horizontal-bar-mode) {
+      background: transparent;
+      clear: none;
+      float: right;
+    }
+  }
+
+  .locale {
+    color: $navigation-color;
+    display: inline;
+    float: right;
+    font-size: 0.8em;
+    margin-top: 1em;
+    padding: 0.75em 1em 0.75em 0;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $navigation-color-hover;
+    }
+  }
+}

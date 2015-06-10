@@ -13,6 +13,7 @@ if bourbon
   gem 'neat'
 
   run 'bundle update sass'
+  copy_file 'app/assets/stylesheets/_normalize.scss'
 
   inside 'app/assets/stylesheets/' do
     append_to_file 'application.scss', <<-CODE

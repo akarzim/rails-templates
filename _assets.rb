@@ -12,7 +12,6 @@ if bourbon
   gem 'bourbon'
   gem 'neat'
 
-  run 'bundle update sass'
   copy_file 'app/assets/stylesheets/_normalize.scss'
 
   inside 'app/assets/stylesheets/' do

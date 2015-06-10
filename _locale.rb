@@ -5,7 +5,7 @@ end
 
 insert_into_file 'config/routes.rb', after: "Rails.application.routes.draw do\n" do
   <<-CODE
-  scope "(:locale), locale: /#{locales.join('|')}/ do
+  scope "(:locale)", locale: /#{locales.join('|')}/ do
   end
   CODE
 end

@@ -59,6 +59,17 @@ A minimal `applicaiton.slim` layout using `_header.slim` and `_footer.slim` part
 ### Locale (optional)
 You'll be asked for which locales you want to install and configure. The available choices are listed in the [Rails i18n](https://github.com/svenfuchs/rails-i18n#available-locales) `README.md` file. These locales will be downloaded from this repo and automatically available in your project and added to the `_header.slim` partial layout's locale switches.
 
+## Troubleshooting
+### Rspec:install never end
+This issue seems to be due to [Spring](https://rubygems.org/gems/spring). You can find more details on this issue [here](https://github.com/rails/spring/issues/265). Here is how to fix it :
+
+`cd` your new aborted Rails project directory and run
+
+```shell
+$ spring stop
+$ bin/spring
+```
+
 ## Contributing
 
 1. Fork it

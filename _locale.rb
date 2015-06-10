@@ -23,5 +23,19 @@ default_locale = locales.first
 environment "config.i18n.default_locale = '#{default_locale.gsub(/\.(yml|rb)$/, '')}'" if default_locale.present?
 environment "config.time_zone = 'Europe/Paris'"
 
+inject_into_class 'app/controllers/application_controller.rb', 'ApplicationController' do
+  <<-CODE
+  before_action :set_locale
+
+  def set_locale
+    I18n.locale = params[:locale] || I18n.default_locale
+  end
+
+  def default_url_options(options = {})
+    { locale: I18n.locale }.merge options
+  end
+  CODE
+end
+
 git add: '.', commit: "-a -m 'Added #{locales.join(",")} localizations'"
 log 'configured', 'internationalization'

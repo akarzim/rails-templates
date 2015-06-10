@@ -29,6 +29,7 @@ CODE
 after_bundle do
   log 'initialized', 'application structure'
 
+  run 'spring stop'
   apply '_readme.rb'
   apply '_environment.rb'
   apply '_template-engine.rb'
